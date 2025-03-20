@@ -242,6 +242,7 @@ async function loadCurrentQuestion(gameId, questionIndex) {
     } catch (error) {
         console.error("Error loading question:", error);
         document.getElementById('current-question').textContent = "Error loading question. The game may have ended.";
+        showStatus("Failed to load current question: " + error.message, "error");
     }
 }
 
