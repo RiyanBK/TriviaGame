@@ -235,21 +235,16 @@ async function showGameDetails(gameId) {
 // Load current question
 async function loadCurrentQuestion(gameId, questionIndex) {
     try {
-        console.log('Loading question for Game ID:', gameId);
-        console.log('Question Index:', questionIndex);
-
         const question = await getCurrentQuestion(gameId);
-        console.log('Raw Question Object:', question);
-
-        // Log the actual values
-        console.log('Category ID:', question.categoryId);
-        console.log('Question Hash:', question.questionHash);
+        
+        if (!question) {
+            console.error('No question retrieved');
+            document.getElementById('current-question').textContent = "No question available";
+            return;
+        }
 
         const category = getCategoryById(question.categoryId);
-        console.log('Category:', category);
-
         const questionText = getQuestionByHash(question.questionHash);
-        console.log('Question Text:', questionText);
         
         // Update question display
         document.getElementById('question-number').textContent = questionIndex + 1;

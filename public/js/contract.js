@@ -831,19 +831,48 @@ async function getPlayerScore(gameId, playerAddress) {
  * Get current question
  * @param {number} gameId - ID of the game
  */
+/**
+ * Get current question
+ * @param {number} gameId - ID of the game
+ */
 async function getCurrentQuestion(gameId) {
-  try {
-    const [categoryId, questionHash] = await contract.getCurrentQuestion(
-      gameId
-    );
-    return {
-      categoryId: categoryId,
-      questionHash: questionHash,
-    };
-  } catch (error) {
-    console.error("Error getting current question:", error);
-    throw error;
-  }
+    try {
+        console.log('Attempting to get current question for Game ID:', gameId);
+        
+        // Additional logging for game info
+        const gameInfo = await getGameInfo(gameId);
+        console.log('Game Info:', gameInfo);
+        
+        // Check if game has started
+        if (!gameInfo.hasStarted) {
+            console.error('Game has not started');
+            return null;
+        }
+        
+        const currentQuestionIndex = gameInfo.currentQuestionIndex;
+        console.log('Current Question Index:', currentQuestionIndex);
+        
+        // Direct contract call with more detailed logging
+        const [categoryId, questionHash] = await contract.getCurrentQuestion(gameId);
+        
+        console.log('Raw Category ID:', categoryId);
+        console.log('Raw Question Hash:', questionHash);
+        
+        return {
+            categoryId: categoryId,
+            questionHash: questionHash
+        };
+    } catch (error) {
+        console.error("Detailed error getting current question:", error);
+        
+        // If it's an ethers.js error, log more details
+        if (error.code) {
+            console.error('Error Code:', error.code);
+            console.error('Error Reason:', error.reason);
+        }
+        
+        throw error;
+    }
 }
 
 /**
