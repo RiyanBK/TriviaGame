@@ -12,91 +12,91 @@ const questionCategories = [
 // IMPORTANT: These hashes MUST match EXACTLY with the hashes in the Vyper contract
 const questionMap = {
     // Category 0: History
-    "0x6f7768f8fb45ffa244b42be750a1d4c51b55a4d1c17dcc1d4f86d94e89d3a215": "Who was the first President of the United States?",
-    "0x7075e9181b5c1c6b79d4472b4d0d930f70cae3fa8626a6a49fa16c4b5bcf1d49": "In which year did World War II end?",
-    "0x84fcae82db33bf1b6000fa70b6541acb1e2a20fbba21d30a0bf247d4f4ccc079": "Which ancient civilization built the Machu Picchu complex?",
-    "0x8a47f7a1c57ca1ce0a3be02c48a0e7a25c94b24f2d20bacc781a78c0c03c7946": "Who wrote the Declaration of Independence?",
-    "0xbf6d4045f306aecb124a36349124e2d4fdfd1a0e95be4fee57b965e7b19b9e58": "Which empire was ruled by Genghis Khan?",
+    "0xb7413592c82021e29f2835540b36663d942b95970fcbce2bdd7d809c05ad64fd": "Who was the first President of the United States?",
+    "0x3141f3c7c662b4d41a6a7abc6c3818fdb79df0098c75c7098867daef985b0812": "In which year did World War II end?",
+    "0x11a59fb5fa366e605994777a92d699291d94d3a78f6b779d7db95d81ddd075d0": "Which ancient civilization built the Machu Picchu complex?",
+    "0xa97bbeded1e045c37850db8fe33430d2c421095376b0f706dac1cf7d65704550": "Who wrote the Declaration of Independence?",
+    "0x0b1c6a94529e9077d6c419a002b763b15cd7c7cd4064985474881af79a9ec021": "Which empire was ruled by Genghis Khan?",
     
     // Category 1: Science
-    "0x228e5a4b967267593ede4a96eed4ac4c50e18a33ec4e2eba9f4ae243ee500db1": "What is the chemical symbol for gold?",
-    "0x1ff4265cb2ec18516e1755ed6a0bd77d08270a4c1ec1be0fa914313685827c92": "What's the nearest planet to the Sun?",
-    "0x37b30e297383aac5cbfd5a7fed689fc4ab42197c1193f0ab5054b3bef1e35c43": "What is the hardest natural substance on Earth?",
-    "0x1e6ca7f3e0a5ad43b6b394aa2b23dbb5d6a32a7b35d7060e18a37142ab5774e8": "What is the largest organ in the human body?",
-    "0x7c36570ce47a23e24b38b1c42ad8d5b35760dc75a34c8a1fc5eaa3bcf5549c31": "Who developed the theory of relativity?",
+    "0xf27ff176a73a48e5ec67ec9c88115dfb1f41a6d954f1dfb61cf72cb1d86cbd1a": "What is the chemical symbol for gold?",
+    "0xa82167bd5141b90d69ed03aead2e5b261b93e9bf3a6ffb935d548b6f91e2ca6d": "What's the nearest planet to the Sun?",
+    "0xb904eb87fd4590d5ef96d7b4f9344b0b037b7ebc69e7ca1522ffc328bdf12c4f": "What is the hardest natural substance on Earth?",
+    "0x5d41010bbc8a288e0262a38d7d4d6bfaed9b85f1f8a1a0a9799521453a7250ad": "What is the largest organ in the human body?",
+    "0x30d48c6e6e79c1443f2d1b1306550ce8947405cc71462d453856b1b3598894d6": "Who developed the theory of relativity?",
     
     // Category 2: Entertainment
-    "0x77d8b9a53a40458be1db74327a02f7f8aebe8684d6d2b0bd0d57676c53e3c5f5": "Who played Jack in the movie Titanic?",
-    "0x63be7e4a09a56a0b1ee1c45e4186c27f255ce4b8de995fb52e62b9940b22d95c": "What was the first feature-length animated film?",
-    "0xae8e5a726b3567ffa8f4ec0be1e87bb0af14a7df37b121a17ad2ff0d5de5a240": "Which band released the album 'Abbey Road'?",
-    "0x9f80b92cfe49919dac7cfb74a9c564751a934a9ddee4e43e5f8eba9d5e708d71": "Who created Mickey Mouse?",
-    "0x193ee77e5fc3c63c6fc1ea4e9560268a5ff7691c4cf29eaa456d3c361b939e61": "Which TV show features characters named Walter White and Jesse Pinkman?",
+    "0xd416475e8a381b358607c53b05cb8da5821d4b8e26b8af7b4070e56f22996879": "Who played Jack in the movie Titanic?",
+    "0x3f10053da086e92d7d2bcf3384e973ac54927f33adbf287a2b6cafacf1683d4b": "What was the first feature-length animated film?",
+    "0x3edad96b4d693e51a38dde4dacc1784f8f6a0ae2570792035c9cda274af461ab": "Which band released the album 'Abbey Road'?",
+    "0xe1dc88cf7d13470ee7818c804bc01928e674282ab4053e086eb0d1872d7205cc": "Who created Mickey Mouse?",
+    "0xdc3bf8bc962a8c8513bd96e7bdee11a16ffea90da0da963a72cc15375f248503": "Which TV show features characters named Walter White and Jesse Pinkman?",
     
     // Category 3: Geography
-    "0x00bbcb4e0a6308f0f4d35154c02f38b98bcb4aaef44f20b5ba31efbb2f964fc1": "What is the capital of Japan?",
-    "0x95a03cb2b95f20ce3b4d0c61f57bc8366c4e2ac4a50ead8259b1db279c8a7a55": "Which country is home to the Great Barrier Reef?",
-    "0x911254da1fbe5ec7e11c7f9d249241a9c44186f50ae6cdf61b1bbea7d46aeed5": "What is the longest river in the world?",
-    "0x46dfe06540147c50ca645ad25a9fa2ad973c48a8f220c00560dbc25f8e61a024": "Which desert is the largest in the world?",
-    "0x47fb9de33bb7cb206aa4a7f8faa9de5a41a0a291e6ad2c74740182a6e5d91eea": "What is the smallest country in the world?",
+    "0xf6dbfb66510ab795f19e55290474fbff4f87d9398bdcc6797eef554dfef5d0ec": "What is the capital of Japan?",
+    "0xb4a305878ac3ad0de5dd53060f3850466e6dc1462fd6d268a7796d4187808d5f": "Which country is home to the Great Barrier Reef?",
+    "0xa7084441b2948ba09d376ac6e3b46579c63ec5d26b33b7b84a8b6ad41dba6d8c": "What is the longest river in the world?",
+    "0x0ad156168df78522d0f72dadadb96577a866f465d28d7f835a03d5564d0a1ab3": "Which desert is the largest in the world?",
+    "0xf5db09b181ee30a81cc2dd4099db953b955a78c647824c674c9f488f48700e95": "What is the smallest country in the world?",
     
     // Category 4: Arts & Literature
-    "0x8c9fb32a17a9b54b627a35bb29d17524aac05fd9b51a06c77acf34e16fe3b2aa": "Who painted the Mona Lisa?",
-    "0x1254bd4ba9a83b60a8a467e746efee77ddd37a03bca39fa6031aae28b95d2b4b": "Who wrote 'Romeo and Juliet'?",
-    "0xe16917b2a8090d9a9901ad1ff12e513e3a53a40b9a5ce6fefe2a9c474f37a41c": "Which artist cut off his own ear?",
-    "0x6d1c06a98eb04c7a85833c921f97b09be4295cc9d1d3f9b4f7f37f14ccc9874b": "Who wrote '1984'?",
-    "0x20aee98a94f4f7ea8a2cb17a3256d5132aa57438b615d70b6ad0f9a3ea5feec2": "What is the name of the famous painting of a woman with a pearl earring?",
+    "0x5b91ad1d83998b72c9faec6d73124c74c2c816e102317506b9b5c2eea84b67fe": "Who painted the Mona Lisa?",
+    "0x457f820d8c913a9de0efc859ac29828b85187297b3ef95b7da0dabcef57c6c91": "Who wrote 'Romeo and Juliet'?",
+    "0x5f36a37eee069051270e3ef2cfa14723a30c68e4139d0370353c0ebf4dc572cd": "Which artist cut off his own ear?",
+    "0xf8ec4b3b2604ec5f5910dcdc6b6e6e6a91fc1a76c05a6e70f4d558eb144753f6": "Who wrote '1984'?",
+    "0x923da3c07c0c2a5742a42522895a840bf926cab988bc86213242aa84df72bf45": "What is the name of the famous painting of a woman with a pearl earring?",
     
     // Category 5: Food & Drink
-    "0x7aa6d1b8e9ba0d6a1d678b171a91b7ff24ccdcbd74ab9dab0fabd46c7ab8c0f5": "What is the main ingredient in guacamole?",
-    "0xc8dd101246e5095fd15ff1e797a288b4a58c04146fcf4c9e9a613f22dd9aa860": "Which country is known for inventing pizza?",
-    "0x989cffea9cf33fc4b55d228625272a7d796e7c07cc64be1c821b9b040cae5b1d": "What grain is used to make sake?",
-    "0xc1aa97bcc8f770de2ff68421de34a54a8f4ea45ce7d4b3a5ad5f46dcf3640623": "Which nut is used to make marzipan?",
-    "0x0fbc62a1a1c5a3f9f889d15b45f3de1fc60e384baf36fa35464ffb1a7a85c23c": "What is the main ingredient in traditional hummus?"
+    "0xb9933a1fb674c62f2ab4f1b91ac8d083bd1194de25213bbe75c296ed3a1f3a79": "What is the main ingredient in guacamole?",
+    "0xc98f62ea962a015f2282a1edd41c6bf1608da8b12e6970027bcd64471f1e5cce": "Which country is known for inventing pizza?",
+    "0x12321f023e2da16327635e3efc9e5a5934f01821cd35c9e74e8523fa271474a7": "What grain is used to make sake?",
+    "0xe0afe97533f186b3e9abdd807c9d0f2b7bc671f17c0c8a5cdadcb05dd7106b08": "Which nut is used to make marzipan?",
+    "0xd913d0533defcabf563118fe720869ebd541b4f0eac69f40603e0354d5308a41": "What is the main ingredient in traditional hummus?"
 };
 
 // Answer map with lowercase keys for case-insensitive matching
 const answerMap = {
     // Category 0: History
-    "george washington": "0x7b24c36e8e3a46eaa6fbc60a92b5be148be63357a8f58fc15cb0b9649e382cdd",
-    "1945": "0xfa217da9294fc840aceae7cb3c7cda08449b0c69ce77c5cfe673bbefa5c6acb4",
-    "inca": "0x5d8e2d72a9c5ef7f95c703a8e19972677c358cdfe8b1c44f44abc1d54f6a5da2",
-    "thomas jefferson": "0x726f4187aa8ee29aa3683faab19513fb10ac7602b8c889d27bc0ce6ec6ad324e",
-    "mongol empire": "0x3a2fa9a7e03e5bd23857b4da65fc51414ae509bcb7bc501baf6c79a15c2593e8",
+    "george washington": "0x22982189b5044e4c5b81d6b9965e6567b9b423efd25f99f828efe4f30099e3b1",
+    "1945": "0x87ab71fbdf35e4aaad8bfc8f0d31bc993245e6516e22a33d6f0766e698769019",
+    "inca": "0x21452effb4c0afdffc9574b8a491bc2c5fec6b6da6e0bac90eb30f62952a95c5",
+    "thomas jefferson": "0xa5a234fb6d5d39d355eba030d23b7fac6c01232c5a3ab6ba4d9e43d2324dba55",
+    "mongol empire": "0x116c0251f31367eca43cc2b1b2bf3e3ee7a5d2053599681f1df373665d770797",
     
     // Category 1: Science
     "au": "0xfcde8a05d133ce581c111bf13965b025a35f3e15e241f532329c2d83d2a09f15",
-    "mercury": "0x7277f3da30e4a53a115fa082a3cc448ba8f20d3a3a5ec99be4b8b5f98c4ac559",
-    "diamond": "0xd1c5fe3c95d9eef229e556a7b25dffd7ec866f989fd8c8513b76a37a69656bc3",
-    "skin": "0x73631caec5857eb2b2b2e19aee1f28d0db89cce3a42d45ee8d3d901ff741efda",
-    "albert einstein": "0xeca0bdf1f95607a917c57848a2be59bd331787be2d1633ca7e66a12a37e1811c",
+    "mercury": "0x1b2a9396f15abb04ba521f5cdf01f4600e3165abeaa58193d70534e575372638",
+    "diamond": "0xaadb29765cb3e4f21bde5ecd65db8e565d901b6c9394dcec22aa81b8ff2d6e2f",
+    "skin": "0x204cfb2cef51dd1f47e23035ad1718c53821542620bfb50f5e4695abccda4e3c",
+    "albert einstein": "0xee291c68a09a3a31851d6c7a5f6bfc6cbe159b199a9fd740aae0f92badf6d3d3",
     
     // Category 2: Entertainment
-    "leonardo dicaprio": "0x1cb7e78c64aa82c15779e4a27e88fbca53c5fc5bde6b4ad7d6550fadbf4e3135",
-    "snow white and the seven dwarfs": "0x1a5bb83ae36c5d3ce8e5c20cb6c3e1e5de8873c99e0992b2db04490c9afcdca6",
-    "the beatles": "0x4ed760888b5683d935e5b590dffe95ec7ed9370baa1dd876830a33c704853b31",
-    "walt disney": "0x2e4afc37fd3d4c12e691da2a146ee93ad02b835f79fc03fdc32b2a2cb6997d96",
-    "breaking bad": "0x85bc97c2082e4183df1e0f00b4c61ca377ed67f457c8aaa0cafc5feb74a9798d",
+    "leonardo dicaprio": "0x0d36886a28924af69f715d73fadbde9a184984f47832155c0d66e1878fdb1383",
+    "snow white and the seven dwarfs": "0x16425bf28dd08a85ad667525d90ae203d76e13c3297faf2659f9cd712ab54ba1",
+    "the beatles": "0x72d66bb54952dafe364ae523d67e97bbac4e1801536bc8b64d4fd1b13f74b2d6",
+    "walt disney": "0xc13292ca2ee5df612f91958cc909f15127b5ab0c7ef5ef70cadd91d883c762e7",
+    "breaking bad": "0x3c1d6c81eee605147112589fa9a8b60d775159a9622c8277a80f3d450c3a79b6",
     
     // Category 3: Geography
-    "tokyo": "0x7d8274355e950a57e8fbbc3ca17becdcd75fc800f6faee94ed9e98e7935f3a69",
-    "australia": "0x2e80db1fa6e16bc18c8afa1e4b44fd226d54a0743fae1bf2e1095cb7bdf6e129",
-    "nile": "0xf9396a49ae78bef43e09f9729064cd9f3e26abcb0cb6c657317bf84db9aa834b",
-    "sahara": "0x67b224362e9db8ce8c9de5e1f134a3fa223a1a8a59aff4a21253f3ce89c8f917",
-    "vatican city": "0xe7ec2c9a475c864dfba398827b5323da52aad41a85e2a4f41b2a8a9cf66e1458",
+    "tokyo": "0x2992e958b7499c60c719cb5283ceca09839b185a0283a816c1c70040be204d77",
+    "australia": "0x8ec7689e5099b1df60b71b1872a0c155c200cf0cb8a0172ebd30e0decf122c9a",
+    "nile": "0x1031406cf7fc4fa09d7dc93744b3e4a937cf6370563bb4d687843c6bd5e12e6c",
+    "sahara": "0x4672b1d49be8e1ff8ea0bbe42151fef4cf75ed433cc240da5e6e0bd12a6048ea",
+    "vatican city": "0x812061bdd122815d2a8dea1298bc0e03a8779625bee88ee393cce765075d732d",
     
     // Category 4: Arts & Literature
-    "leonardo da vinci": "0x3c1358b9e71da3c5deee4ebdb0bc57d4d90a45a30dc7e8c7c5165c8992cb2d9e",
-    "william shakespeare": "0x1902a7842facad5db97bf11129ed688cf0ca574d25b8c9d8d1b6e3c3ba4e19cf",
-    "vincent van gogh": "0x39c5b2c41b1ce431e8dfbfb1d8d84f1ae1fff15d7d3b28a32a7fb1e154e7e32a",
-    "george orwell": "0xb12cfbf2df814e50f4f9890cf1667b41363f5d8d3c641db0c760313692e56f3f",
-    "girl with a pearl earring": "0x4e574de3b3b9b5ecdaf3f5b8d05c2339f7f55d2af5edd13c34ef5e1dd4eef41a",
+    "leonardo da vinci": "0x9289069442ed277616b7932f80f14ef6ec14ce1c5dd7d4ae7eb531c215e0d998",
+    "william shakespeare": "0x51345acf4421befe46499f66fb231b39f54cfdc33313ea981932d22e47e4cf92",
+    "vincent van gogh": "0x51345acf4421befe46499f66fb231b39f54cfdc33313ea981932d22e47e4cf92",
+    "george orwell": "0x644b70cd68e1b8dd6926cfca0c82b6c60560cb80411696777653b502d80a6e7f",
+    "girl with a pearl earring": "51f3f74dfc0f87c5ac1e9bafeba64f9ac02e869f1c7c1e89409826d643f55397",
     
     // Category 5: Food & Drink
-    "avocado": "0x8429e74d41b7ea4f4bcf6cbb6db5beccf044aa64e4be6b538c31c5ec1d40bb4c",
-    "italy": "0xed142151342da281874f4e63a158f120309ffac962ae53d2ad049ecdcc7ce73e",
-    "rice": "0xd0a82a59e26076b9e82ce650f47aa5c3bf0b90b1b6dbdcf7983a4e8bd59e5f50",
-    "almond": "0xe96831d9fc8be45cd1b14d78ca9bce8a11f7b8fe0f12b30e1b556f37d4d4d9d5",
-    "chickpeas": "0xea5ac1782ea29c6c15a2b0a2dadab9fb8f36c812ad0de6e5aad4d7e3e6db7333"
+    "avocado": "0xa59f8e04087931875e5cd720c441bf6287a5af6235a70323d9f268402ece8169",
+    "italy": "0xd17b173c03f969f4ff6c02fbc14ba23e644cb5194a89169c119e0788bf014b8c",
+    "rice": "0x41e0fd8831d24a56368979f34e9d32a4a05cc03f1b2562f8ee1b8d46a324d0ff",
+    "almond": "0x3a352852ed1d52a195874a22099c63362687f8e520fe1562ad9a5ba8422a5ed9",
+    "chickpeas": "0x47a3c00e5903e80a6872ab1f9934622c82744d9ad8b366cc3d3e2ad57f0803d4"
 };
 
 /**
