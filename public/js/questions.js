@@ -135,4 +135,6 @@ function hashAnswer(answer) {
     // If not in our map, hash it directly
     // This uses ethers.js utils
     return ethers.utils.keccak256(ethers.utils.toUtf8Bytes(answer));
+
+    //edit test
 }
