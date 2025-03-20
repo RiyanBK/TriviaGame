@@ -235,9 +235,21 @@ async function showGameDetails(gameId) {
 // Load current question
 async function loadCurrentQuestion(gameId, questionIndex) {
     try {
+        console.log('Loading question for Game ID:', gameId);
+        console.log('Question Index:', questionIndex);
+
         const question = await getCurrentQuestion(gameId);
+        console.log('Raw Question Object:', question);
+
+        // Log the actual values
+        console.log('Category ID:', question.categoryId);
+        console.log('Question Hash:', question.questionHash);
+
         const category = getCategoryById(question.categoryId);
+        console.log('Category:', category);
+
         const questionText = getQuestionByHash(question.questionHash);
+        console.log('Question Text:', questionText);
         
         // Update question display
         document.getElementById('question-number').textContent = questionIndex + 1;
@@ -250,8 +262,8 @@ async function loadCurrentQuestion(gameId, questionIndex) {
         document.getElementById('player-answer').value = '';
         
     } catch (error) {
-        console.error("Error loading question:", error);
-        document.getElementById('current-question').textContent = "Error loading question. The game may have ended.";
+        console.error("Detailed error loading question:", error);
+        document.getElementById('current-question').textContent = "Error loading question: " + error.message;
         showStatus("Failed to load current question: " + error.message, "error");
     }
 }

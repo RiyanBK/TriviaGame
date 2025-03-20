@@ -105,7 +105,15 @@ const answerMap = {
  * @return {string} The human-readable question
  */
 function getQuestionByHash(hash) {
-    return questionMap[hash] || "Unknown question";
+    console.log('Getting question for hash:', hash);
+    
+    // Add some logging to see what's in questionMap
+    console.log('Full QuestionMap:', questionMap);
+    
+    const question = questionMap[hash];
+    console.log('Retrieved Question:', question);
+    
+    return question || "Unknown question";
 }
 
 /**
