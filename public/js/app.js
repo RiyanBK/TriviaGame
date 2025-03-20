@@ -34,7 +34,6 @@ async function init() {
     document.getElementById('submit-answer-btn').addEventListener('click', handleSubmitAnswer);
     document.getElementById('back-to-games-btn').addEventListener('click', showGameList);
     document.getElementById('back-to-games-from-results-btn').addEventListener('click', showGameList);
-    document.getElementById('remove-game-btn')?.addEventListener('click', handleRemoveGame);
 
     // Check if MetaMask is available and autoconnect
     if (window.ethereum) {
@@ -179,15 +178,6 @@ async function showGameDetails(gameId) {
             document.getElementById('start-game-btn').disabled = gameInfo.hasStarted || gameInfo.hasEnded;
             document.getElementById('end-game-btn').disabled = !gameInfo.hasStarted || gameInfo.hasEnded;
             document.getElementById('force-next-btn').disabled = !gameInfo.hasStarted || gameInfo.hasEnded;
-
-            const removeGameBtn = document.createElement('button');
-            removeGameBtn.id = 'remove-game-btn';
-            removeGameBtn.className = 'btn btn-danger ms-2';
-            removeGameBtn.textContent = 'Remove Game';
-            removeGameBtn.disabled = gameInfo.hasStarted;
-            removeGameBtn.addEventListener('click', handleRemoveGame);
-            
-            document.getElementById('creator-controls').appendChild(removeGameBtn);
         } else {
             creatorControls.classList.add('d-none');
             playerControls.classList.remove('d-none');
@@ -352,35 +342,11 @@ async function handleCreateGame(e) {
 
 // Handle joining a game
 async function handleJoinGame() {
-    console.log('Join Game clicked');
-    console.log('Current Game ID:', currentGameId);
-    console.log('User Address:', userAddress);
-
-    if (currentGameId === null || currentGameId === undefined) {
-        showStatus('No game selected', 'warning');
-        return;
-    }
+    if (!currentGameId) return;
     
     try {
-        const gameInfo = await getGameInfo(currentGameId);
-        console.log('Game Info:', gameInfo);
-
         const entryFeeMilliEth = await getEntryFeeInMilliEth(currentGameId);
-        console.log('Entry Fee (milliETH):', entryFeeMilliEth);
-        
         const entryFeeWei = ethers.utils.parseEther((entryFeeMilliEth / 1000).toString());
-        console.log('Entry Fee (Wei):', entryFeeWei.toString());
-        
-        // Additional checks
-        if (gameInfo.hasStarted) {
-            showStatus('Game has already started', 'warning');
-            return;
-        }
-
-        if (gameInfo.currentPlayers >= gameInfo.maxPlayers) {
-            showStatus('Game is full', 'warning');
-            return;
-        }
         
         showStatus(`Joining game... Please confirm in MetaMask.`, "info");
         
@@ -390,8 +356,8 @@ async function handleJoinGame() {
         // Reload game details
         setTimeout(() => showGameDetails(currentGameId), 1000);
     } catch (error) {
-        console.error("Full error in handleJoinGame:", error);
-        showStatus(`Failed to join game: ${error.message}`, "error");
+        console.error("Error joining game:", error);
+        showStatus("Failed to join game: " + error.message, "error");
     }
 }
 
@@ -540,29 +506,6 @@ function showStatus(message, type = 'info') {
     // Auto-hide success messages after 5 seconds
     if (type === 'success') {
         setTimeout(hideStatus, 5000);
-    }
-}
-
-// Handle removing a game
-async function handleRemoveGame() {
-    if (!currentGameId) return;
-    
-    if (!isCreator) {
-        showStatus("Only the game creator can remove the game", "warning");
-        return;
-    }
-    
-    showStatus("Removing game...", "info");
-    
-    try {
-        await removeGame(currentGameId);
-        showStatus("Game removed successfully!", "success");
-        
-        // Return to game list
-        showGameList();
-    } catch (error) {
-        console.error("Error removing game:", error);
-        showStatus("Failed to remove game: " + error.message, "error");
     }
 }
 
