@@ -1,0 +1,239 @@
+/* Main styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Card styling */
+.card-section {
+    margin-bottom: 2rem;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-title {
+    color: #6c5ce7;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Button styling */
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #5649c0;
+    border-color: #5649c0;
+}
+
+.btn-success {
+    background-color: #00b894;
+    border-color: #00b894;
+}
+
+.btn-success:hover, .btn-success:focus {
+    background-color: #00a383;
+    border-color: #00a383;
+}
+
+.btn-warning {
+    background-color: #fdcb6e;
+    border-color: #fdcb6e;
+    color: #343a40;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+    background-color: #f0b94b;
+    border-color: #f0b94b;
+    color: #343a40;
+}
+
+.btn-danger {
+    background-color: #e17055;
+    border-color: #e17055;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+    background-color: #d25f45;
+    border-color: #d25f45;
+}
+
+.btn-secondary {
+    background-color: #b2bec3;
+    border-color: #b2bec3;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #a0adb2;
+    border-color: #a0adb2;
+}
+
+/* Game List */
+.game-item {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    background-color: #f1f3f5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.game-item:hover {
+    background-color: #e9ecef;
+}
+
+/* User address display */
+.user-address {
+    font-family: monospace;
+    font-weight: 500;
+    color: #6c5ce7;
+}
+
+/* Question styling */
+.question-area {
+    background-color: #f1f3f5;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.question-number {
+    font-weight: 600;
+    color: #6c5ce7;
+    margin-bottom: 0.5rem;
+}
+
+.current-question {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+/* Category colors */
+.category-history {
+    background-color: #e74c3c;
+}
+
+.category-science {
+    background-color: #3498db;
+}
+
+.category-entertainment {
+    background-color: #f39c12;
+}
+
+.category-geography {
+    background-color: #2ecc71;
+}
+
+.category-arts {
+    background-color: #9b59b6;
+}
+
+.category-food {
+    background-color: #e67e22;
+}
+
+/* Status messages */
+#status-area {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+}
+
+.status-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+/* Loading animation */
+.loader {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(108, 92, 231, 0.3);
+    border-radius: 50%;
+    border-top-color: #6c5ce7;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .question-area {
+        padding: 1rem;
+    }
+    
+    .current-question {
+        font-size: 1.1rem;
+    }
+}
