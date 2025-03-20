@@ -9,49 +9,49 @@ const questionCategories = [
 ];
 
 // This maps question hashes to the actual question text
-// These should match the hashes you used in the contract
+// IMPORTANT: These hashes MUST match EXACTLY with the hashes in the Vyper contract
 const questionMap = {
     // Category 0: History
-    "0x1e0a9e90c9b452f8cd1e37ef421e4a0311c5489c0d73d15f7a0c55f71383edc9": "Who was the first President of the United States?",
-    "0x4f820aa0e9a97ab66b6303cb55a4cec8dbe6b41063d2343db7edbbafb59e2cad": "In which year did World War II end?",
-    "0xee5a60c93069672ad68de33f3771b87b6950415c422c87c7dca1c70dad3d2324": "Which ancient civilization built the Machu Picchu complex?",
-    "0x39a7ab343f73d7c08cf0b8ad8ae4d5ad758bba6a7d3abb6fcca51f3905e4cd7f": "Who wrote the Declaration of Independence?",
-    "0x0bc4fca0d8dd8a4366f0a6a40c8d778db8b9da478a4d00b1a35967bcebdb8b5d": "Which empire was ruled by Genghis Khan?",
+    "0x6f7768f8fb45ffa244b42be750a1d4c51b55a4d1c17dcc1d4f86d94e89d3a215": "Who was the first President of the United States?",
+    "0x7075e9181b5c1c6b79d4472b4d0d930f70cae3fa8626a6a49fa16c4b5bcf1d49": "In which year did World War II end?",
+    "0x84fcae82db33bf1b6000fa70b6541acb1e2a20fbba21d30a0bf247d4f4ccc079": "Which ancient civilization built the Machu Picchu complex?",
+    "0x8a47f7a1c57ca1ce0a3be02c48a0e7a25c94b24f2d20bacc781a78c0c03c7946": "Who wrote the Declaration of Independence?",
+    "0xbf6d4045f306aecb124a36349124e2d4fdfd1a0e95be4fee57b965e7b19b9e58": "Which empire was ruled by Genghis Khan?",
     
     // Category 1: Science
-    "0x1af6a986991b4edac0848c4c651275e9524775ae2d6a28926a3b1075aa595652": "What is the chemical symbol for gold?",
-    "0xda36ba2a27e3a3d9e3f0b637672d6b6a7434d297ff5b5e5c8c01eafd67cebf8d": "What's the nearest planet to the Sun?",
-    "0x80b70a062219ce68d6dcb41d8cc3a1987315aa5ed08be6b101aad7b5b7f19a5d": "What is the hardest natural substance on Earth?",
-    "0xd2c47645364cf47098e2c36c964f9cc079f01c1cae22605c4ec4d2ae8ec67be1": "What is the largest organ in the human body?",
-    "0x28e52bc99b6599ac43dd4bc6c9d2fce9b5d48f6b6a96db0f6c442c0bedbec41c": "Who developed the theory of relativity?",
+    "0x228e5a4b967267593ede4a96eed4ac4c50e18a33ec4e2eba9f4ae243ee500db1": "What is the chemical symbol for gold?",
+    "0x1ff4265cb2ec18516e1755ed6a0bd77d08270a4c1ec1be0fa914313685827c92": "What's the nearest planet to the Sun?",
+    "0x37b30e297383aac5cbfd5a7fed689fc4ab42197c1193f0ab5054b3bef1e35c43": "What is the hardest natural substance on Earth?",
+    "0x1e6ca7f3e0a5ad43b6b394aa2b23dbb5d6a32a7b35d7060e18a37142ab5774e8": "What is the largest organ in the human body?",
+    "0x7c36570ce47a23e24b38b1c42ad8d5b35760dc75a34c8a1fc5eaa3bcf5549c31": "Who developed the theory of relativity?",
     
     // Category 2: Entertainment
-    "0x9b4a61fbda1e20c9b030b6d5f7ec7a95d1cfcbf4d3c9eb36af63d34e84458b24": "Who played Jack in the movie Titanic?",
-    "0xb5b06f74a26c7a2e204bbef723baf2937c1cf1e5fc16c67d1b2094b16fad9bc3": "What was the first feature-length animated film?",
-    "0x4e90fecf45a04eaf56a7a16083e61ae0bbb0a6d2b70e07478118e4908302e064": "Which band released the album 'Abbey Road'?",
-    "0x7c70560918c19c9563ececec21f6a8e7e0cf160da94dac5b383a8bca4cffacae": "Who created Mickey Mouse?",
-    "0x32a37f44693d57f8a2f0e2fcc6a2be3a32c7e0b36c5ab9c5be3aa3fa6ae5c9c6": "Which TV show features characters named Walter White and Jesse Pinkman?",
+    "0x77d8b9a53a40458be1db74327a02f7f8aebe8684d6d2b0bd0d57676c53e3c5f5": "Who played Jack in the movie Titanic?",
+    "0x63be7e4a09a56a0b1ee1c45e4186c27f255ce4b8de995fb52e62b9940b22d95c": "What was the first feature-length animated film?",
+    "0xae8e5a726b3567ffa8f4ec0be1e87bb0af14a7df37b121a17ad2ff0d5de5a240": "Which band released the album 'Abbey Road'?",
+    "0x9f80b92cfe49919dac7cfb74a9c564751a934a9ddee4e43e5f8eba9d5e708d71": "Who created Mickey Mouse?",
+    "0x193ee77e5fc3c63c6fc1ea4e9560268a5ff7691c4cf29eaa456d3c361b939e61": "Which TV show features characters named Walter White and Jesse Pinkman?",
     
     // Category 3: Geography
-    "0xbdb83beac12c14fb37a14fdd26c38f4571e8d09ef89259bb0a708a34c9ad2ec9": "What is the capital of Japan?",
-    "0x02dede78b4819ec4bb5e5c8af68a0fb8ba06aa0de020716ef9a01a5f08a24a61": "Which country is home to the Great Barrier Reef?",
-    "0xf92ae5e16ebf133c7e3def95d8fff1fc5d0fc418774477ddd5c19af9a47b507e": "What is the longest river in the world?",
-    "0xd1d09feaa52db32a70f88f6aaed7ca43e95c42c2d931998d9d9ff1b6b3cc7aa8": "Which desert is the largest in the world?",
-    "0xb93ef8d1ed0d0dce9a6d2c87a8f02ed30ea05a7a1b2ac7db8a5e7ae94870a899": "What is the smallest country in the world?",
+    "0x00bbcb4e0a6308f0f4d35154c02f38b98bcb4aaef44f20b5ba31efbb2f964fc1": "What is the capital of Japan?",
+    "0x95a03cb2b95f20ce3b4d0c61f57bc8366c4e2ac4a50ead8259b1db279c8a7a55": "Which country is home to the Great Barrier Reef?",
+    "0x911254da1fbe5ec7e11c7f9d249241a9c44186f50ae6cdf61b1bbea7d46aeed5": "What is the longest river in the world?",
+    "0x46dfe06540147c50ca645ad25a9fa2ad973c48a8f220c00560dbc25f8e61a024": "Which desert is the largest in the world?",
+    "0x47fb9de33bb7cb206aa4a7f8faa9de5a41a0a291e6ad2c74740182a6e5d91eea": "What is the smallest country in the world?",
     
     // Category 4: Arts & Literature
-    "0x2aad8f60fc1fa97503b8c6c5b6b7b7a1ec634a8970e86111f8e850ce7808186c": "Who painted the Mona Lisa?",
-    "0x94bac969a2691a978724d14e5e9a0fa4eff7a75db0bddc3739e33c655f3e381d": "Who wrote 'Romeo and Juliet'?",
-    "0x70f3fca98de9ec5eea919c2b6ad54f7c73dd4ae2dc14d6bf9d01f8cf80cafa24": "Which artist cut off his own ear?",
-    "0x91a2c94bb7d66be67b5e53b76558670fac67b1b4eb5b7cf0e61e9e63ac6096a1": "Who wrote '1984'?",
-    "0x3fc40f1c41fa4b8cf36e6c1aa08772ef33ad6629e8c39275cbee4ee328685d64": "What is the name of the famous painting of a woman with a pearl earring?",
+    "0x8c9fb32a17a9b54b627a35bb29d17524aac05fd9b51a06c77acf34e16fe3b2aa": "Who painted the Mona Lisa?",
+    "0x1254bd4ba9a83b60a8a467e746efee77ddd37a03bca39fa6031aae28b95d2b4b": "Who wrote 'Romeo and Juliet'?",
+    "0xe16917b2a8090d9a9901ad1ff12e513e3a53a40b9a5ce6fefe2a9c474f37a41c": "Which artist cut off his own ear?",
+    "0x6d1c06a98eb04c7a85833c921f97b09be4295cc9d1d3f9b4f7f37f14ccc9874b": "Who wrote '1984'?",
+    "0x20aee98a94f4f7ea8a2cb17a3256d5132aa57438b615d70b6ad0f9a3ea5feec2": "What is the name of the famous painting of a woman with a pearl earring?",
     
     // Category 5: Food & Drink
-    "0xf15674ec15b75c3878d3e06214fc2fc7d8c7c72f0c2c6a50c553be687d4effb8": "What is the main ingredient in guacamole?",
-    "0x26ddd34e8117f7e429bcc763f4515dc50b1775f62b3eced3f2becdda4793bedl": "Which country is known for inventing pizza?",
-    "0xde2b1eed0b05c398ac9ec67df160fd04b3d75834c51a437af9bb5c4e1be0cf9b": "What grain is used to make sake?",
-    "0xe74a5d8eac52b5d0789e184c9a0bdf4173b453a2aa5db334f5efa57d20e2f6c7": "Which nut is used to make marzipan?",
-    "0x3f40c95f18e7baf4f2e2ef42c60e3e9e6a5fc19afe6e0150b2629d54a3b1bfb7": "What is the main ingredient in traditional hummus?"
+    "0x7aa6d1b8e9ba0d6a1d678b171a91b7ff24ccdcbd74ab9dab0fabd46c7ab8c0f5": "What is the main ingredient in guacamole?",
+    "0xc8dd101246e5095fd15ff1e797a288b4a58c04146fcf4c9e9a613f22dd9aa860": "Which country is known for inventing pizza?",
+    "0x989cffea9cf33fc4b55d228625272a7d796e7c07cc64be1c821b9b040cae5b1d": "What grain is used to make sake?",
+    "0xc1aa97bcc8f770de2ff68421de34a54a8f4ea45ce7d4b3a5ad5f46dcf3640623": "Which nut is used to make marzipan?",
+    "0x0fbc62a1a1c5a3f9f889d15b45f3de1fc60e384baf36fa35464ffb1a7a85c23c": "What is the main ingredient in traditional hummus?"
 };
 
 // Answer map with lowercase keys for case-insensitive matching
