@@ -236,13 +236,6 @@ async function showGameDetails(gameId) {
 async function loadCurrentQuestion(gameId, questionIndex) {
     try {
         const question = await getCurrentQuestion(gameId);
-        
-        if (!question) {
-            console.error('No question retrieved');
-            document.getElementById('current-question').textContent = "No question available";
-            return;
-        }
-
         const category = getCategoryById(question.categoryId);
         const questionText = getQuestionByHash(question.questionHash);
         
@@ -257,8 +250,8 @@ async function loadCurrentQuestion(gameId, questionIndex) {
         document.getElementById('player-answer').value = '';
         
     } catch (error) {
-        console.error("Detailed error loading question:", error);
-        document.getElementById('current-question').textContent = "Error loading question: " + error.message;
+        console.error("Error loading question:", error);
+        document.getElementById('current-question').textContent = "Error loading question. The game may have ended.";
         showStatus("Failed to load current question: " + error.message, "error");
     }
 }
